@@ -1,5 +1,6 @@
 package domain;
 
+import java.util.Collections;
 import java.util.Map;
 
 public class GameResultCalculator {
@@ -15,6 +16,6 @@ public class GameResultCalculator {
     }
 
     public Map<Player, LadderResult> findGameResult() {
-        return playerWithResult;
+        return Collections.unmodifiableMap(this.playerWithResult);
     }
 }

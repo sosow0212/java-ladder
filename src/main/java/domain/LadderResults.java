@@ -1,7 +1,9 @@
 package domain;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class LadderResults {
 
@@ -32,8 +34,8 @@ public class LadderResults {
                 .orElseThrow(IllegalArgumentException::new);
     }
 
-    public HashMap<Integer, LadderResult> getLadderResults() {
-        return ladderResults;
+    public Map<Integer, LadderResult> getLadderResults() {
+        return Collections.unmodifiableMap(this.ladderResults);
     }
 
     public LadderResult findLadderResultByIndex(final int index) {

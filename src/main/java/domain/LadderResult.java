@@ -9,10 +9,9 @@ public class LadderResult {
         this.result = result;
     }
 
-    // todo: Exception 메시지 채우기
     private void validate(final String result) {
         if (result.isEmpty()) {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("보상을 입력해주세요.");
         }
     }
 
@@ -21,6 +20,6 @@ public class LadderResult {
     }
 
     public String getResult() {
-        return result;
+        return this.result;
     }
 }
